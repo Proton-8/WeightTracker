@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(207, 200, 200);
+    color: navy;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background: rgb(104, 101, 101);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(165, 162, 162);
+}
+
+nav a {
+    margin-left: 20px;
+}
+
+.home-page {
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer{
+    text-align: center;
+     margin-block: 50px;
+}
+#login 
