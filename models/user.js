@@ -39,10 +39,10 @@ User.init(
         allowNull: false,
       },
       startDate: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
       },
       targetDate: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
       }
     },
 
@@ -60,7 +60,7 @@ User.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'user',
 });
 

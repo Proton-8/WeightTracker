@@ -5,14 +5,14 @@ class Tracker extends Model {}
 
 Tracker.init(
     {
-        user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'User',
-          key: 'id',
-          unique: false
-        }
-      },
+      //   user_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: 'User',
+      //     key: 'id',
+      //     unique: false
+      //   }
+      // },
         date: {
         type: DataTypes.DATEONLY,
         allowNull: false,

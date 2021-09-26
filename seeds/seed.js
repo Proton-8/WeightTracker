@@ -6,7 +6,7 @@ const trackerData = require('./trackerData.json');
 
 const createDatabase = async() => {
     
-    // await sequelize.query(`DROP DATABASE IF EXISTS ${sequelize.config.database};`);
+    await sequelize.query(`DROP DATABASE IF EXISTS ${sequelize.config.database};`);
     await sequelize.query(`CREATE DATABASE IF NOT EXISTS ${sequelize.config.database};`);
     console.log("database: " + sequelize.config.database)
     await sequelize.query(`USE ${sequelize.config.database};`)
