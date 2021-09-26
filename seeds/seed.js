@@ -1,12 +1,14 @@
 const sequelize = require('../config/connection');
-const { User, Plan } = require('../models');
+const { User, Tracker } = require('../models');
 
 const userData = require('./userData.json');
-const planData = require('./planData.json');
+const trackerData = require('./trackerData.json');
 
 const createDatabase = async() => {
+    
     // await sequelize.query(`DROP DATABASE IF EXISTS ${sequelize.config.database};`);
-    await sequelize.query(`CREATE DATABASE ${sequelize.config.database};`);
+    await sequelize.query(`CREATE DATABASE IF NOT EXISTS ${sequelize.config.database};`);
+    console.log("database: " + sequelize.config.database)
     await sequelize.query(`USE ${sequelize.config.database};`)
 }
 
