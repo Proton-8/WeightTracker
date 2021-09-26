@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 1;
     padding: 0;
 }
 
@@ -15,13 +15,15 @@ body {
 
 header {
     text-align: center;
-    background: rgb(104, 101, 101);
+    background:lightskyblue;
 }
 
 nav {
     display: flex;
     justify-content: flex-start;
-    background-color: rgb(165, 162, 162);
+    background-color:gold;
+    
+    
 }
 
 nav a {
@@ -29,12 +31,59 @@ nav a {
 }
 
 .home-page {
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 footer{
     text-align: center;
      margin-block: 50px;
 }
-#login 
+.aboutUs {
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 5px;
+    max-width: 100%;
+    background: teal;
+    color: antiquewhite;
+  
+  }
+  .Tests {
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 25px;
+    max-width: 100%;
+    background: rgb(10, 100, 218);
+    color:ghostwhite;  
+  }
+  .login-card {
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    text-align:justify;
+    justify-content: space-evenly;
+    padding: 10px;
+    max-width: 50%;
+    background:cornflowerblue;
+    color: antiquewhite;
+}
+  
+    .login-card1 {
+        display: flex;
+        /* Forces elements to the next line if they don't fit */
+        flex-wrap: wrap;
+        text-align:left;
+        justify-content: space-evenly;
+        padding: 1px;
+        max-width: 50%;
+        background:royalblue;
+        color:black;
+    }
