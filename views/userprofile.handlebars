@@ -3,16 +3,16 @@
 
 <div>
     <div class="mb-3 row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">Username:</label>
+        <label for="staticEmail" class="col-sm-2 col-form-label">User Name:</label>
         <div class="col-sm-10">
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{user.id}}">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{full_name}}">
         </div>
     </div>
     <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Password:</label>
         <div class="col-sm-10">
             {{!-- need help to make password appear as *** only --}}
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{user.password}}">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="*****">
         </div>
     </div>
     <button type="button" class="btn btn-secondary btn-sm">Edit
@@ -20,15 +20,19 @@
 </div>
 
 <div class=>
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Current Weight</span>
-        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Save</button>
-    </div>  
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="inputGroup-sizing-default">Target Weight</span>
-        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Save</button>
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Current Weight:</label>
+        <div class="col-sm-10">
+            {{!-- need help to make password appear as *** only --}}
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{current_weight}} lbs">
+        </div>
+    </div> 
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Targett Weight:</label>
+        <div class="col-sm-10">
+            {{!-- need help to make password appear as *** only --}}
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{target_weight}} lbs">
+        </div>
     </div>
 
     <p>Start with years viewMode.</p>

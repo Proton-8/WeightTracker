@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight Tracker</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    {{!-- moment-datepicker --}}
+    <link href="moment-datepicker/moment-datepicker.min.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
@@ -14,16 +17,16 @@
     </header>
     <nav>
         <a href="/">Home</a>
+        {{#if logged_in}}
+        <a href="/userprofile">User Profile</a>
+        <a href="/" id="logout">logout</a>
+        {{else}}
         <a href="/login">login</a>
+        {{/if}}
+
     </nav>
     <main>
         {{{body}}}
     </main>
-    <footer>
-        <h6>
-         TeamWork in UW: Ronald Shutter, My Ly, Elham Bazazzadeh.
-        </h6>
-        <label>Contact us: https://github.com/Proton-8/WeightTracker</label>
-    </footer>
 </body>
 </html>

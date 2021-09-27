@@ -9,22 +9,4 @@
     "target_date": "11/25/2021"
 }]
 
-        "fullName": "Don Don",
-        "email": "don@gmail.com",
-        "password": "password1",
-        "currentWeight": "150",
-        "targetWeight": "125",
-        "startDate": "09/25/2021",
-        "targetDate": "10/25/2021"
-    },
-    {
-        "fullName": "My My",
-        "email": "my@gmail.com",
-        "password": "password1",
-        "currentWeight": "190",
-        "targetWeight": "155",
-        "startDate": "09/25/2021",
-        "targetDate": "10/25/2021"
-    }
-]
-
+ 
