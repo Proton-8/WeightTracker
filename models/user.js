@@ -8,60 +8,58 @@ class User extends Model {
     }
 }
 
-User.init(
-    {
+User.init({
         id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-        fullName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        
-      },
-        //username: {
-        email:{
-        type: DataTypes.STRING,
-        allowNull: false,
-  
-      },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      currentWeight: {
-        type: DataTypes.INTEGER,
-        allowNull:false,
-      },
-      targetWeight: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      startDate: {
-        type: DataTypes.DATEONLY,
-      },
-      targetDate: {
-        type: DataTypes.DATEONLY,
-      }
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        full_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        current_weight: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        target_weight: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        start_date: {
+            type: DataTypes.DATE,
+        },
+        target_date: {
+            type: DataTypes.DATE,
+        }
     },
 
-{
-    hooks: {
-        beforeCreate: async(newUserData) => {
-            newUserData.password = await bcrypt.hash(newUserData.password, 10);
-            return newUserData;
+    {
+        hooks: {
+            beforeCreate: async(newUserData) => {
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
+                return newUserData;
+            },
+            beforeUpdate: async(updatedUserData) => {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            },
         },
-        beforeUpdate: async(updatedUserData) => {
-            updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-            return updatedUserData;
-        },
-    },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user',
-});
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user',
+    });
 
 module.exports = User;

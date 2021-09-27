@@ -3,30 +3,30 @@ const sequelize = require('../config/connection');
 
 class Tracker extends Model {}
 
-Tracker.init(
-    {
-        user_id: {
+Tracker.init({
+    id: {
         type: DataTypes.INTEGER,
-        references: {
-          model: 'User',
-          key: 'id',
-          unique: false
-        }
-      },
-        date: {
+        primaryKey: true,
+        autoIncrement: true
+    },
+    track_date: {
         type: DataTypes.DATEONLY,
         allowNull: false,
-        
-      },
-        dailyWeight: {
+
+    },
+    daily_weight: {
         type: DataTypes.INTEGER,
         allowNull: false,
-  
-      },
-      
-    },
 
-{
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'User',
+            key: 'id'
+        }
+    },
+}, {
     sequelize,
     timestamps: false,
     freezeTableName: true,

@@ -1,11 +1,9 @@
 [{
-        "name": "Don Don",
-        "email": "don@gmail.com",
-        "password": "password1"
-    },
-    {
-        "name": "My My",
-        "email": "my@gmail.com",
-        "password": "password1"
-    }
-]
+    "full_name": "Don Don",
+    "email": "don@gmail.com",
+    "password": "password1",
+    "current_weight": "150",
+    "target_weight": "145",
+    "start_date": "10/01/2021",
+    "target_date": "11/25/2021"
+}]
