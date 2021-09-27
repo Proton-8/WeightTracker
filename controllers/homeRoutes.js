@@ -8,19 +8,9 @@ router.get('/', (req, res) => {
 
 });
 
-// original starting code stuff -----------
-
-// router.get('/login', (req, res) => {
-//     res.render('login', {
-//         logged_in: req.session.logged_in
-//     });
 
 
-
-
-//   better code :-) --------
-
-// Login route
+// Better Login Route
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');
@@ -30,10 +20,6 @@ router.get('/login', (req, res) => {
   });  
 
 
-
-
-
-// });
 
 
 module.exports = router;
