@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Track } = require('../../models');
+const withAuth = require ('../../utils/auth');
 
 router.post('/', async(req, res) => {
     try {
@@ -7,7 +8,7 @@ router.post('/', async(req, res) => {
 
         req.session.save(() => {
             //req.session.user_id = userData.id;
-            req.session.id = userData.id;
+            req.session.user_id = userData.id;
             req.session.logged_in = true;
 
             res.status(200).json(userData);
@@ -39,7 +40,7 @@ router.post('/login', async(req, res) => {
         const user = userData.get({ plain: true });
 
         req.session.save(() => {
-            req.session.id = user.id;
+            req.session.user_id = user.id;
             req.session.logged_in = true;
 
             res.json({ user: user, message: 'You are now logged in!' });
@@ -64,13 +65,14 @@ router.post('/logout', (req, res) => {
 router.get('/', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
-      const userData = await User.findByPk(req.session.user_id, {
+      console.log(req.session.user_id);
+      const userData = await User.findByPk(req.session.user_id);
         // attributes: { exclude: ['password'] },
-        include: [{ model: Track }],
-      });
-      
-      const user = userData.map((userinfo) => userinfo.get({ plain: true }));
-      
+        // include: [{ model: Track }],
+    //   });
+      console.log(userData);
+    //   const user = userData.map((userinfo) => userinfo.get({ plain: true }));
+      const user = userData.get({plain: true});
       console.log(user),
       res.render('userprofile', {
         ...user,

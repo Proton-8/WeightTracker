@@ -15,19 +15,13 @@ User.init({
             primaryKey: true,
             autoIncrement: true
         },
+       
         full_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-        fullName: {
         type: DataTypes.STRING,
         allowNull: false,
         
       },
-        //username: {
+  
         email:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -37,49 +31,21 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
       },
-      currentWeight: {
+      current_weight: {
         type: DataTypes.INTEGER,
         allowNull:false,
       },
-      targetWeight: {
+      target_weight: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      startDate: {
+      start_date: {
         type: DataTypes.DATE,
       },
-      targetDate: {
+      target_date: {
         type: DataTypes.DATE,
       }
     },
-
-
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        current_weight: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        target_weight: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        start_date: {
-            type: DataTypes.DATE,
-        },
-        target_date: {
-            type: DataTypes.DATE,
-        }
-    },
-
 
     {
         hooks: {
@@ -98,12 +64,5 @@ User.init({
         underscored: true,
         modelName: 'user',
     });
-
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: false,
-    modelName: 'user',
-});
 
 module.exports = User;

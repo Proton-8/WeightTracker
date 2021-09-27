@@ -10,19 +10,9 @@ Tracker.init({
         primaryKey: true,
         autoIncrement: true
     },
+    
     track_date: {
-Tracker.init(
-    {
-      //   user_id: {
-      //   type: DataTypes.INTEGER,
-      //   references: {
-      //     model: 'User',
-      //     key: 'id',
-      //     unique: false
-      //   }
-      // },
-        date: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
         allowNull: false,
 
     },
