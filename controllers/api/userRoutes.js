@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Track } = require('../../models');
 
 router.post('/', async(req, res) => {
     try {
@@ -57,6 +57,27 @@ router.post('/logout', (req, res) => {
         });
     } else {
         res.status(404).end();
+    }
+});
+
+// My's part, userprofile route for userprofile page
+router.get('/', withAuth, async (req, res) => {
+    try {
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        // attributes: { exclude: ['password'] },
+        include: [{ model: Track }],
+      });
+      
+      const user = userData.map((userinfo) => userinfo.get({ plain: true }));
+      
+      console.log(user),
+      res.render('userprofile', {
+        ...user,
+        logged_in: true
+      });
+    } catch (err) {
+      res.status(500).json(err);
     }
 });
 
