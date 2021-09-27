@@ -1,4 +1,14 @@
 [{
+
+    "full_name": "Don Don",
+    "email": "don@gmail.com",
+    "password": "password1",
+    "current_weight": "150",
+    "target_weight": "145",
+    "start_date": "10/01/2021",
+    "target_date": "11/25/2021"
+}]
+
         "fullName": "Don Don",
         "email": "don@gmail.com",
         "password": "password1",
@@ -17,3 +27,4 @@
         "targetDate": "10/25/2021"
     }
 ]
+

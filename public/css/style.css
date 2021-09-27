@@ -1,3 +1,11 @@
+:root {
+    --primary : #C49100;
+    --tittle:#4C3800;
+    --nav:#6C5000;
+    --secondary:white;
+    --hover:black;
+
+}
 * {
     box-sizing: border-box;
     margin: 1;
@@ -11,36 +19,111 @@ body {
     color: navy;
     line-height: 1.7;
     overflow-x: hidden;
+    min-height: 100%;
+    width:100%;
+    height:auto;
 }
 
 header {
     text-align: center;
+
+    /* background: rgb(104, 101, 101); */
+    background: var(--primary);
+    color :var(--tittle);
+
     background:lightskyblue;
+
 }
 
 nav {
     display: flex;
     justify-content: flex-start;
+
+    background-color: Var(--nav);
+
     background-color:gold;
     
-    
+   
 }
 
 nav a {
     margin-left: 20px;
+    color:var(--secondary);
+
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    color:var(--hover);
 }
 
 .home-page {
+
+    /* text-align: center; */
+    margin-top:10px;
+    padding: 5px;
+    width: 100%;
+
+
+}
+.image_first,img{
+    box-shadow: var(--primary);
+
+    border-style: solid;
+    border-color: white;
+    
+    width: 340px;
+    height: 340px;
+    /* width: 30%; */
+    /* height:auto; */
+    display:inline;
+
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     margin-top: 10px;
+
 }
 
-footer{
-    text-align: center;
-     margin-block: 50px;
+.firstPage{
+    box-shadow: var(--primary);
+
+    border-style: solid;
+    border-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    float: right;
+    color: black;
+    width: 65%;
+    display:inline;
+    
+
 }
+
+
+footer{
+
+    height: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--tittle);
+    text-align: center;
+
+    text-align: center;
+     /* margin-block: 50px; */
+   
+}
+
+/* .firstPage{
+    box-shadow: inset 0 0 5px 3px #AE0602;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    float: left;
+} */
+#login 
 .aboutUs {
     display: flex;
     /* Forces elements to the next line if they don't fit */
@@ -87,3 +170,4 @@ footer{
         background:royalblue;
         color:black;
     }
+
