@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Tracker extends Model {}
 
+
 Tracker.init({
     id: {
         type: DataTypes.INTEGER,
@@ -10,6 +11,17 @@ Tracker.init({
         autoIncrement: true
     },
     track_date: {
+Tracker.init(
+    {
+      //   user_id: {
+      //   type: DataTypes.INTEGER,
+      //   references: {
+      //     model: 'User',
+      //     key: 'id',
+      //     unique: false
+      //   }
+      // },
+        date: {
         type: DataTypes.DATEONLY,
         allowNull: false,
 

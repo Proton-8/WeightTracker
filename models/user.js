@@ -10,6 +10,7 @@ class User extends Model {
 
 User.init({
         id: {
+
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -17,6 +18,41 @@ User.init({
         full_name: {
             type: DataTypes.STRING,
             allowNull: false,
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+      },
+        fullName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        
+      },
+        //username: {
+        email:{
+        type: DataTypes.STRING,
+        allowNull: false,
+  
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      currentWeight: {
+        type: DataTypes.INTEGER,
+        allowNull:false,
+      },
+      targetWeight: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      startDate: {
+        type: DataTypes.DATE,
+      },
+      targetDate: {
+        type: DataTypes.DATE,
+      }
+    },
+
 
         },
         email: {
@@ -44,6 +80,7 @@ User.init({
         }
     },
 
+
     {
         hooks: {
             beforeCreate: async(newUserData) => {
@@ -61,5 +98,12 @@ User.init({
         underscored: true,
         modelName: 'user',
     });
+
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: false,
+    modelName: 'user',
+});
 
 module.exports = User;
