@@ -158,15 +158,20 @@ a:hover{
     .login-card1 {
         display: flex;
         /* Forces elements to the next line if they don't fit */
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         text-align:left;
-        justify-content: space-evenly;
+        justify-content:flex-start;
         padding: 10px;
-        max-width: 30%;
+        max-width: 35%;
         background:royalblue;
         color:black;
+      
     }
+.container{
 
+    background:tan;
+    /* max-width: 100%; */
+}
 .login-card {
     display: flex;
     /* Forces elements to the next line if they don't fit */
@@ -176,7 +181,7 @@ a:hover{
     padding: 10px;
     margin-top: 10px;
     max-width: 40%;
-    background:cornflowerblue;
+    background:midnightblue;
     color: antiquewhite;
 }
 
@@ -188,8 +193,8 @@ a:hover{
     }
     
     .social-icons img {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin-left: 20px;
     }
     /* .divider {
