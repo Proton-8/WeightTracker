@@ -1,6 +1,13 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
+const usersRoute = require('./userRoutes');
 
-router.use('/users', userRoutes);
+// needed?? 
+// const trackerRoutes = require('./trackerRoutes');
+
+
+
+router.use('/users', usersRoute);
+// needed?? 
+// tracker.use('/trackers', trackerRoutes);
 
 module.exports = router;
