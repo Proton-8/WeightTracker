@@ -1,32 +1,49 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weight Tracker</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    {{!-- moment-datepicker --}}
-    <link href="moment-datepicker/moment-datepicker.min.css" rel="stylesheet"/>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    {{! moment-datepicker }}
+    {{!-- <link href="moment-datepicker/moment-datepicker.min.css" rel="stylesheet" /> --}}
+
+    {{! JQery }}
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    {{! jqueryUI }}
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"
+    ></script>
+
+    {{!-- <script src="../../public/js/userprofile.js"></script> --}}
+
+  </head>
+  <body>
     <header>
-        <br>
-        <h1>Weight Tracker</h1>
+      <br />
+      <h1>Weight Tracker</h1>
     </header>
     <nav>
-        <a href="/">Home</a>
-        {{#if logged_in}}
+      <a href="/">Home</a>
+      {{#if logged_in}}
         <a href="/userprofile">User Profile</a>
         <a href="/" id="logout">logout</a>
-        {{else}}
+      {{else}}
         <a href="/login">login</a>
-        {{/if}}
+      {{/if}}
 
     </nav>
     <main>
-        {{{body}}}
+      {{{body}}}
     </main>
-</body>
+    
+  </body>
 </html>

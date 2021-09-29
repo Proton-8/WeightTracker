@@ -37,20 +37,25 @@
 
     <p>Start with years viewMode.</p>
 
-    <div class="well">
-        {{!-- change the date to more current --}}
-        <div class="input-append date" id="dpYears" data-date="12-02-2012" data-datepicker-format="DD-MM-YYYY"
-             data-datepicker-viewmode="years">
-          <input class="span2" size="16" type="text" value="12-02-2012" readonly>
-          <span class="add-on"><i class="icon-calendar"></i></span>
+
+    <p>
+        Program Start Date:
+    </p>
+
+    <div class="datecontainer">
+        <div class="row">
+            <input type="text" class="datePicker" value="{{date}}">
         </div>
     </div>
 
     
     <p>
-        Program Start Date:
-    </p>
-    <p>
         Program End Date:
     </p>
 </div>
+
+<script type="text/javascript">
+    
+    $('.datePicker').datepicker();
+    
+</script>

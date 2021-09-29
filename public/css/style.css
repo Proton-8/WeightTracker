@@ -1,120 +1,107 @@
 :root {
-    --primary : #C49100;
-    --tittle:#4C3800;
-    --nav:#6C5000;
-    --secondary:white;
-    --hover:black;
-
+  --primary: #c49100;
+  --tittle: #4c3800;
+  --nav: #6c5000;
+  --secondary: white;
+  --hover: black;
 }
 * {
-    box-sizing: border-box;
-    margin: 1;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 1;
+  padding: 0;
 }
 
 html,
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background: rgb(207, 200, 200);
-    color: navy;
-    line-height: 1.7;
-    overflow-x: hidden;
-    min-height: 100%;
-    width:100%;
-    height:auto;
+  font-family: "Times New Roman", Times, serif;
+  background: rgb(207, 200, 200);
+  color: navy;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 header {
-    text-align: center;
+  text-align: center;
 
-    /* background: rgb(104, 101, 101); */
-    background: var(--primary);
-    color :var(--tittle);
+  /* background: rgb(104, 101, 101); */
+  background: var(--primary);
+  color: var(--tittle);
 
-    background:lightskyblue;
-
+  background: lightskyblue;
 }
 
 nav {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 
-    background-color: Var(--nav);
+  background-color: Var(--nav);
 
-    background-color:gold;
-    
-   
+  background-color: gold;
 }
 
 nav a {
-    margin-left: 20px;
-    color:var(--secondary);
-
+  margin-left: 20px;
+  color: var(--secondary);
 }
-a:link{
-    text-decoration: none;
+a:link {
+  text-decoration: none;
 }
-a:hover{
-    color:var(--hover);
+a:hover {
+  color: var(--hover);
 }
 
 .home-page {
-
-    /* text-align: center; */
-    margin-top:10px;
-    padding: 5px;
-    width: 100%;
-
-
+  /* text-align: center; */
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
 }
-.image_first,img{
-    box-shadow: var(--primary);
+.image_first,
+img {
+  box-shadow: var(--primary);
 
-    border-style: solid;
-    border-color: white;
-    
-    width: 340px;
-    height: 340px;
-    /* width: 30%; */
-    /* height:auto; */
-    display:inline;
+  border-style: solid;
+  border-color: white;
 
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    margin-top: 10px;
+  width: 340px;
+  height: 340px;
+  /* width: 30%; */
+  /* height:auto; */
+  display: inline;
 
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.firstPage{
-    box-shadow: var(--primary);
+.firstPage {
+  box-shadow: var(--primary);
 
-    border-style: solid;
-    border-color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
-    float: right;
-    color: black;
-    width: 65%;
-    display:inline;
-    
-
+  border-style: solid;
+  border-color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  float: right;
+  color: black;
+  width: 65%;
+  display: inline;
 }
 
+footer {
+  height: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--tittle);
+  text-align: center;
 
-footer{
-
-    height: auto;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary);
-    color: var(--tittle);
-    text-align: center;
-
-    text-align: center;
-     /* margin-block: 50px; */
-   
+  text-align: center;
+  /* margin-block: 50px; */
 }
 
 /* .firstPage{
@@ -123,51 +110,63 @@ footer{
     font-size: 14px;
     float: left;
 } */
-#login 
-.aboutUs {
-    display: flex;
-    /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-evenly;
-    padding: 5px;
-    max-width: 100%;
-    background: teal;
-    color: antiquewhite;
-  
-  }
-  .Tests {
-    display: flex;
-    /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-evenly;
-    padding: 25px;
-    max-width: 100%;
-    background: rgb(10, 100, 218);
-    color:ghostwhite;  
-  }
-  .login-card {
-    display: flex;
-    /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
-    text-align:justify;
-    justify-content: space-evenly;
-    padding: 10px;
-    max-width: 50%;
-    background:cornflowerblue;
-    color: antiquewhite;
+#login .aboutUs {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  max-width: 100%;
+  background: teal;
+  color: antiquewhite;
 }
-  
-    .login-card1 {
-        display: flex;
-        /* Forces elements to the next line if they don't fit */
-        flex-wrap: wrap;
-        text-align:left;
-        justify-content: space-evenly;
-        padding: 1px;
-        max-width: 50%;
-        background:royalblue;
-        color:black;
-    }
+.Tests {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 25px;
+  max-width: 100%;
+  background: rgb(10, 100, 218);
+  color: ghostwhite;
+}
+.login-card {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  text-align: justify;
+  justify-content: space-evenly;
+  padding: 10px;
+  max-width: 50%;
+  background: cornflowerblue;
+  color: antiquewhite;
+}
 
+.login-card1 {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-evenly;
+  padding: 1px;
+  max-width: 50%;
+  background: royalblue;
+  color: black;
+}
+
+.datecontainer{
+    /* position: relative; */
+}
+.row {
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  /* position: absolute; */
+  z-index: 10;
+}
+
+#ui-datepicker-div {
+    background: white;
+}
