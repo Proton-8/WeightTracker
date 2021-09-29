@@ -158,10 +158,16 @@ footer {
   background: royalblue;
   color: black;
 }
+
+
 .container {
-  background: tan;
-  /* max-width: 100%; */
+  background:lightblue;
+  color:black;
+  /* display:flexbox; */
+  /* max-width:50%; */
 }
+
+
 .login-card {
   display: flex;
   /* Forces elements to the next line if they don't fit */
