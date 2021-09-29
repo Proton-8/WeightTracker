@@ -15,8 +15,6 @@
             <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="*****">
         </div>
     </div>
-    <button type="button" class="btn btn-secondary btn-sm">Edit
-    </button>
 </div>
 
 <div class=>
@@ -35,22 +33,34 @@
         </div>
     </div>
 
-    <p>Start with years viewMode.</p>
+    
 
-    <div class="well">
-        {{!-- change the date to more current --}}
-        <div class="input-append date" id="dpYears" data-date="12-02-2012" data-datepicker-format="DD-MM-YYYY"
-             data-datepicker-viewmode="years">
-          <input class="span2" size="16" type="text" value="12-02-2012" readonly>
-          <span class="add-on"><i class="icon-calendar"></i></span>
+    <div class="datecontainer">
+        <div class="row">
+            <label>Program Start Date:</label>
+            <input type="text" class="datePicker" id="datepicker-13" value="{{date}}">
         </div>
     </div>
 
     
-    <p>
-        Program Start Date:
-    </p>
-    <p>
-        Program End Date:
-    </p>
+    <div class="datecontainer">
+        <div class="row">
+            <label>Program End Date:</label>
+            <input type="text" class="datePicker" id="datepicker-14" value="{{date}}">
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary btn-sm">Edit
+    </button>
 </div>
+
+<script type="text/javascript">
+    $(function() {
+            $( "#datepicker-13" ).datepicker();
+            $( "#datepicker-13" ).datepicker("show");
+            $( "#datepicker-14" ).datepicker();
+            $( "#datepicker-14" ).datepicker("show");
+         });
+</script>
+
+{{!-- $('.datePicker').datepicker(); --}}

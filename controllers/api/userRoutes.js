@@ -66,6 +66,8 @@ router.post('/logout', (req, res) => {
 // My's part, userprofile route for userprofile page
 router.get('/', withAuth, async (req, res) => {
     try {
+        let now = new Date();
+        let today = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
       // Find the logged in user based on the session ID
       console.log(req.session.user_id);
       const userData = await User.findByPk(req.session.user_id);
@@ -78,6 +80,7 @@ router.get('/', withAuth, async (req, res) => {
       console.log(user),
       res.render('userprofile', {
         ...user,
+        date: today,
         logged_in: true
       });
     } catch (err) {
