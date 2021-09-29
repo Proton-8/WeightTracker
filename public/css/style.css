@@ -1,9 +1,10 @@
 :root {
     --primary : #C49100;
     --tittle:#4C3800;
-    --nav:#6C5000;
+    --nav:#d4d116;
     --secondary:white;
     --hover:black;
+   
 
 }
 * {
@@ -12,8 +13,8 @@
     padding: 0;
 }
 
-html,
-body {
+/* html, */
+/* body {
     font-family: 'Times New Roman', Times, serif;
     background: rgb(207, 200, 200);
     color: navy;
@@ -22,7 +23,7 @@ body {
     min-height: 100%;
     width:100%;
     height:auto;
-}
+} */
 
 header {
     text-align: center;
@@ -30,18 +31,21 @@ header {
     /* background: rgb(104, 101, 101); */
     background: var(--primary);
     color :var(--tittle);
+text-align: center;
 
-    background:lightskyblue;
+    /* background:lightskyblue; */
+    padding-bottom: 1px;
 
 }
 
 nav {
     display: flex;
     justify-content: flex-start;
-
+    line-height: 3;
     background-color: Var(--nav);
-
-    background-color:gold;
+    padding-top: 5px;
+    margin-top: 3px;
+    /* background-color:gold; */
     
    
 }
@@ -58,63 +62,65 @@ a:hover{
     color:var(--hover);
 }
 
-.home-page {
+/* .home-page {
 
-    /* text-align: center; */
-    margin-top:10px;
+   
+    margin-top:20px;
     padding: 5px;
     width: 100%;
 
 
-}
-.image_first,img{
+} 
+*/
+/* .image_first,img{
     box-shadow: var(--primary);
 
     border-style: solid;
     border-color: white;
     
     width: 340px;
-    height: 340px;
+    height: 340px; */
     /* width: 30%; */
     /* height:auto; */
-    display:inline;
+    /* display:inline;
 
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     margin-top: 10px;
 
-}
+} */
 
-.firstPage{
-    box-shadow: var(--primary);
+/* .firstPage{ */
+    /* box-shadow: var(--primary); */
 
-    border-style: solid;
-    border-color: white;
+    /* border-style: solid;
+    border-color: rgb(216, 17, 17);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 20px;
     float: right;
     color: black;
-    width: 65%;
+    width: 95%;
     display:inline;
     
 
-}
+} */
 
 
 footer{
 
-    height: auto;
-    left: 0;
-    bottom: 0;
+    height:auto;
+    margin-top: 10px;
+    /* left: 0;
+    bottom: 10px; */
     width: 100%;
     background-color: var(--primary);
-    color: var(--tittle);
+    color:blanchedalmond;
     text-align: center;
 
-    text-align: center;
-     /* margin-block: 50px; */
+     /* margin-block: 50px;
    
+
 }
 
 /* .firstPage{
@@ -123,11 +129,11 @@ footer{
     font-size: 14px;
     float: left;
 } */
-#login 
-.aboutUs {
-    display: flex;
+/* #login  */
+/* .aboutUs {
+    display: flex; */
     /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
     padding: 5px;
@@ -135,39 +141,64 @@ footer{
     background: teal;
     color: antiquewhite;
   
-  }
-  .Tests {
-    display: flex;
+  } */
+  /* .Tests {
+    display: flex; */
     /* Forces elements to the next line if they don't fit */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
     padding: 25px;
     max-width: 100%;
     background: rgb(10, 100, 218);
     color:ghostwhite;  
-  }
-  .login-card {
+  } */
+  
+  
+    .login-card1 {
+        display: flex;
+        /* Forces elements to the next line if they don't fit */
+        flex-wrap:wrap;
+        text-align:left;
+        justify-content:flex-start;
+        padding: 10px;
+        max-width: 25%;
+        background:royalblue;
+        color:black;
+      
+    }
+.container{
+
+    background:tan;
+    /* max-width: 100%; */
+}
+.login-card {
     display: flex;
     /* Forces elements to the next line if they don't fit */
     flex-wrap: wrap;
     text-align:justify;
     justify-content: space-evenly;
     padding: 10px;
-    max-width: 50%;
-    background:cornflowerblue;
+    margin-top: 10px;
+    max-width: 25%;
+    background:midnightblue;
     color: antiquewhite;
 }
-  
-    .login-card1 {
-        display: flex;
-        /* Forces elements to the next line if they don't fit */
-        flex-wrap: wrap;
-        text-align:left;
-        justify-content: space-evenly;
-        padding: 1px;
-        max-width: 50%;
-        background:royalblue;
-        color:black;
-    }
 
+    .social-icons {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        color: ivory;    }
+    
+    .social-icons img {
+        width: 1px;
+        height: 1px;
+        margin-left: 1px;
+    }
+    /* .divider {
+        width: 100%;
+        height: 3px;
+        border-top: 1px rgb(78, 74, 134) solid;
+        margin: 30px 0;
+    } */

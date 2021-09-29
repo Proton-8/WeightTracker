@@ -1,48 +1,60 @@
-
 <br>
-<div class="flex-row justify-center">
-{{!-- <section class="flex-row justify-center"></section> --}}
 
-  <div class="login-card1">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
+<div class="card bg-dark text-black">
+
+  <img src="/image/2.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Returning User</strong></h3>
+              <label for="email-login">Email:</label>
+              <input class="form-input" type="text" id="email-login" />
+              <br>
+              <label for="password-login">Password:</label>
+              <input class="form-input " type="password" id="password-login" />
+              {{!--
+            </div> --}}
+            <br>
+            <button class="login-form btn btn-info rounded-circle" type="submit">Login</button>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-</div>
-  <br>
-  <div class="login-card">
-    <h2 class="page-title"> NEW user? Please Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        {{!-- <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" /> --}}
-      </div>
+
       {{!-- <br> --}}
+      <div class="col-sm-6"></div>
 
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title"><strong>New User</h3></strong>
+            <label for="email-login">Email:</label>
+            <input class="form-input" type="text" id="email-login" />
+            <br>
+
+            <label for="password-login">Password:</label>
+            <input class="sign" type="password" id="password-login" />
+
+            {{!-- <br> --}}
+            {{!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            --}}
+            <button class="signup-form btn btn-primary rounded"  type="submit">Sign up</button>
+          </div>
+          {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" id="signupbtn" type="submit">signup</button>
-      </div>
-    </form>
+    </div>
   </div>
+
+
 </div>
+</div>
+</div>
+</div>
+
 
 <script src="./js/login.js"></script>
