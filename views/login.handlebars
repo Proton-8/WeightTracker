@@ -9,22 +9,25 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="card">
-            <div class="card-body">
               <h3 class="card-title"><strong>Returning User</strong></h3>
-              <label for="email-login">Email:</label>
-              <input class="form-input" type="text" id="email-login" />
-              <br>
-              <label for="password-login">Password:</label>
-              <input class="form-input " type="password" id="password-login" />
-              {{!--
-            </div> --}}
-            <br>
-            <button class="login-form btn btn-info rounded-circle" type="submit">Login</button>
+            <form class="form login-form">
+              <div class="form-group">
+                <label for="email-login">Email:</label>
+                <input class="form-input" type="text" id="email-login" />
+              </div>
+              <div class="form-group">
+                <label for="password-login">Password:</label>
+                <input class="form-input" type="password" id="password-login" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">login</button>
+              </div>
+            </form>
+
           </div>
         </div>
       </div>
 
-      {{!-- <br> --}}
       <div class="col-sm-6"></div>
 
       <div class="col-sm-3">
@@ -51,9 +54,6 @@
   </div>
 
 
-</div>
-</div>
-</div>
 </div>
 
 

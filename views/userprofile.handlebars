@@ -15,8 +15,6 @@
             <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="*****">
         </div>
     </div>
-    <button type="button" class="btn btn-secondary btn-sm">Edit
-    </button>
 </div>
 
 <div class=>
@@ -35,27 +33,34 @@
         </div>
     </div>
 
-    <p>Start with years viewMode.</p>
-
-
-    <p>
-        Program Start Date:
-    </p>
+    
 
     <div class="datecontainer">
         <div class="row">
-            <input type="text" class="datePicker" value="{{date}}">
+            <label>Program Start Date:</label>
+            <input type="text" class="datePicker" id="datepicker-13" value="{{date}}">
         </div>
     </div>
 
     
-    <p>
-        Program End Date:
-    </p>
+    <div class="datecontainer">
+        <div class="row">
+            <label>Program End Date:</label>
+            <input type="text" class="datePicker" id="datepicker-14" value="{{date}}">
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary btn-sm">Edit
+    </button>
 </div>
 
 <script type="text/javascript">
-    
-    $('.datePicker').datepicker();
-    
+    $(function() {
+            $( "#datepicker-13" ).datepicker();
+            $( "#datepicker-13" ).datepicker("show");
+            $( "#datepicker-14" ).datepicker();
+            $( "#datepicker-14" ).datepicker("show");
+         });
 </script>
+
+{{!-- $('.datePicker').datepicker(); --}}
