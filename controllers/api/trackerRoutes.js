@@ -1,76 +1,23 @@
 const router = require('express').Router();
-const { User, Track } = require('../../models');
+const { User,Tracker} = require('../../models');
 const withAuth = require ('../../utils/auth');
 
-
-// router.post('/login', async(req, res) => {
-//     try {
-//         const userData = await User.findOne({ where: { email: req.body.email } });
-
-//         if (!userData) {
-//             res
-//                 .status(400)
-//                 .json({ message: 'Incorrect email or password, please try again' });
-//             return;
-//         }
-
-//         const validPassword = await userData.checkPassword(req.body.password);
-
-//         if (!validPassword) {
-//             res
-//                 .status(400)
-//                 .json({ message: 'Incorrect email or password, please try again' });
-//             return;
-//         }
-//         const user = userData.get({ plain: true });
-
-//         req.session.save(() => {
-//             req.session.user_id = user.id;
-//             req.session.logged_in = true;
-
-//             res.json({ user: user, message: 'You are now logged in!' });
-//         });
-
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-// router.post('/logout', (req, res) => {
-//     if (req.session.logged_in) {
-       
-//         req.session.destroy(() => {
-//             console.log(req.session.logged_in);
-//              res.status(204).end();
-//         });
-//     } else {
-//         res.status(404).end();
-//     }
-// });
-
-// My's part, userprofile route for userprofile page
-router.get('/:id', withAuth, async (req, res) => {
+//////////////////////////////////
+// CREATE a New Track for User
+router.post('/', withAuth, async(req, res) => {
     try {
-        let now = new Date();
-        let today = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
-      // Find the logged in user based on the session ID
-      console.log(req.session.user_id);
-      const userData = await User.findByPk(req.session.user_id);
-        // attributes: { exclude: ['password'] },
-        // include: [{ model: Track }],
-    //   });
-      console.log(userData);
-    //   const user = userData.map((userinfo) => userinfo.get({ plain: true }));
-      const user = userData.get({plain: true});
-      console.log(user),
-      res.render('tracker', {
-        ...user,
-        date: today,
-        logged_in: true
-      });
+          const newTracker= await User.create({
+            user_id: req.params.id,
+            track_date : req.body.track_date,
+            daily_weight:req.body.daily_weight,
+        });
+
+        res.status(200).json(newTracker);
     } catch (err) {
-      res.status(500).json(err);
+        console.error(err);
+        res.status(400).json(err);
     }
 });
 
 module.exports = router;
+
