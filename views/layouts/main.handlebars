@@ -44,7 +44,10 @@
   <body>
     <header>
       <br />
-      <h1 class="display-1">Weight Tracker</h1>
+      <h1 class="display-1 cursive">Weight Tracker
+        <img src="/image/measure-1A.jpg">
+      </h1>
+      
     </header>
     <nav>
       {{!-- <a href="/">Home</a>
@@ -56,16 +59,29 @@
       {{/if}} --}}
 
         {{!-- <h3>Button Groups</h3> --}}
+
+ {{!-- <div class="left-side">
+            <a href="/">Home</a>
+            <a href="/activeprojects">Active Projects</a> {{#if logged_in}}
+            <a href="/myprojects">My Projects</a>
+        </div> --}}
+
+ {{!-- <a class="navbar-brand" href="#"> --}}
+<a class="navbar-brand"></a>
+      <img src="/image/2A.jpg" alt="" width="60" height="60">
+
         <div class="btn-group">
-            <a class="btn btn-primary" href="/">Home</a>
+
+            <a href="/">Home</a>
             {{#if logged_in}}
+
             <a href="/userprofile">Profile</a>
             <a id="trackid" href="/api/trackers">Track My Progress</a>
             <a href="/" id="logout">logout</a>
             {{else}}
             <class="nav-item">
                 {{!-- <a class="nav-link active" aria-current="page" href="#">Home</a> --}}
-                <a class="btn btn-secondary" href="/login">login</a>
+                <a href="/login">login</a>
                 </class>
                 {{/if}}
         </div>
