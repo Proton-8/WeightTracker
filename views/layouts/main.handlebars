@@ -76,7 +76,7 @@
             {{#if logged_in}}
 
             <a href="/userprofile">Profile</a>
-            <a id="trackid" href="/api/trackers">Track My Progress</a>
+            <a id="trackid" href="/api/trackers" trackerid="{{user_id}}">Track My Progress</a>
             <a href="/" id="logout">logout</a>
             {{else}}
             <class="nav-item">
