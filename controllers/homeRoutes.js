@@ -71,6 +71,7 @@ router.get("/trackers", withAuth, async (req, res) => {
   }
 });
 
+
 router.post('/logout', (req, res) => {
   console.log('==============================')
   if (req.session.logged_in) {
