@@ -1,9 +1,7 @@
-
-const trackIdHandler = async(event) => {
+const loginHandler = async(event) => {
     event.preventDefault()
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
-    
     const trackId = event.currentTarget.attributes['trackerid'].value;
   
     if (email && password) {
@@ -27,13 +25,3 @@ const trackIdHandler = async(event) => {
 
 document.querySelector('#trackid')
 .addEventListener('click', trackIdHandler)
-
-
-
-
-
-
-
-
-
-trackIdEl.addEventListener('click', trackIdHandler);

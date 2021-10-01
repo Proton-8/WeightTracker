@@ -2,12 +2,17 @@
 // to REVIEW -----
 
 const logout = async() => {
-    const response = await fetch('/api/users/logout', {
+    console.log('===============================')
+    const response = await fetch('/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     });
-
-    document.location.replace('/');
+    if(response.ok) {
+        document.location.replace('/');
+    } else {
+        alert('alert!!!!!!!')
+    }
+    
 };
 
 document.querySelector('#logout').addEventListener('click', logout);

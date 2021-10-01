@@ -2,5 +2,5 @@
 const trackerFormHandler = async function(event) {
     event.preventDefault();
 
-    const trackId = document.querySelector('#trackid').
-}
+    const trackId = document.querySelector('#trackid')
+};

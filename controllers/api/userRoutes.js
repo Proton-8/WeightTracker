@@ -52,6 +52,7 @@ router.post('/login', async(req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+    console.log('==============================')
     if (req.session.logged_in) {
        
         req.session.destroy(() => {
@@ -66,26 +67,24 @@ router.post('/logout', (req, res) => {
 // My's part, userprofile route for userprofile page
 router.get('/', withAuth, async (req, res) => {
     try {
-        let now = new Date();
-        let today = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
       // Find the logged in user based on the session ID
       console.log(req.session.user_id);
       const userData = await User.findByPk(req.session.user_id);
         // attributes: { exclude: ['password'] },
         // include: [{ model: Track }],
     //   });
+      console.log('asgjfbasgfjkasfoagsvgasijg');
       console.log(userData);
     //   const user = userData.map((userinfo) => userinfo.get({ plain: true }));
       const user = userData.get({plain: true});
       console.log(user),
       res.render('userprofile', {
         ...user,
-        date: today,
         logged_in: true
       });
     } catch (err) {
       res.status(500).json(err);
     }
-});
+  });
 
 module.exports = router;
