@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const usersRoute = require('./userRoutes');
+const userRoute = require('./userRoutes');
 const trackerRoute = require('./trackerRoutes')
-// needed?? 
-// const trackerRoutes = require('./trackerRoutes');
+const signupRoute = require('./signupRoutes')
 
 
+router.use('/users', userRoute);
 
-router.use('/users', usersRoute);
-// needed?? 
-// tracker.use('/trackers', trackerRoutes);
 router.use('/trackers', trackerRoute);
+
+router.use('/signups', signupRoute);
+
 module.exports = router;
