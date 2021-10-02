@@ -1,3 +1,7 @@
+<div class="card login-card1" style="width: 25rem;">
+  <div class="tracker">
+    <h2>My Progress</h2>
+  
 <div class>
   <div class="mb-3 row">
     <label for="staticEmail" class="col-sm-2 col-form-label">Daily Weight:</label>
@@ -12,7 +16,7 @@
       />
     </div>
   </div>
-
+</div>
   <div class="datecontainer">
     <div class="row">
       <label>Date:</label>
@@ -24,12 +28,14 @@
     </div>
   </div>
   <div class="report-table">
-    <table>
+    <table class="table">
+      <thead class="thead-dark">
       <tr>
-        <th>Date</th>
-        <th>Weight</th>
-        <th>Edit</th>
+        <th scope="col">Date</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Edit</th>
       </tr>
+      </thead>
       {{#each progresses as |progress|}}
       <tr tracker_id="{{progress.id}}">
         <td>{{format_date progress.track_date}}</td>
@@ -39,6 +45,7 @@
       {{/each}}
     </table>
   </div>
+</div>
 </div>
 
 <script src="/js/tracker.js"></script>
