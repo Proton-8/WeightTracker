@@ -177,6 +177,15 @@ footer {
   margin-top: 25px;
 }
 
+<<<<<<< HEAD
+#tracker-weight, 
+#tracker-date {
+  width: 120px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+=======
 .social-icons {
   display: flex;
   align-items: center;
@@ -196,3 +205,4 @@ footer {
   border-top: 1px rgb(78, 74, 134) solid;
   margin: 30px 0;
 }
+>>>>>>> main
