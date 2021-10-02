@@ -184,3 +184,11 @@ footer {
   margin-left: 10px;
   margin-top: 25px;
 }
+
+#tracker-weight, 
+#tracker-date {
+  width: 120px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
