@@ -1,58 +1,74 @@
-
-{{!-- <h2>Plan page to be implemented...</h2> --}}
-
-{{!-- <div> --}}
-    <br>
-    <div class="container">
-    <div class="mb-3 row">
+<div class="card login-card1" style="min-width: 50rem;">
+  <div class="profile">
+    <h2>My Profile</h2>
+    {{!-- <div class="container"> --}}
+      <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">User Name:</label>
         <div class="col-sm-5">
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{full_name}}">
+          <input
+            type="text"
+            readonly
+            class="form-control-plaintext"
+            id="staticEmail"
+            value="{{full_name}}"/>
         </div>
-    </div>
-    <div class="mb-3 row">
+      </div>
+      <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Password:</label>
         <div class="col-sm-5">
-            {{!-- need help to make password appear as *** only --}}
-            <input type="text" class="form-control-plaintext" id="staticEmail" value="*****">
+          <input
+            type="text"
+            class="form-control-plaintext"
+            id="staticEmail"
+            value="*****"/>
         </div>
-    </div>
-{{!-- </div> --}}
+      </div>
 
-<div class=>
-    <div class="mb-3 row">
+      <div class=>
+      <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Current Weight:</label>
         <div class="col-sm-5">
-            {{!-- need help to make password appear as *** only --}}
-            <input type="text" class="form-control-plaintext" id="staticEmail" value="{{current_weight}} lbs">
+          <input
+            type="text"
+            class="form-control-plaintext"
+            id="staticEmail"
+            value="{{current_weight}} lbs"/>
         </div>
-    </div> 
-    <div class="mb-3 row">
+      </div>
+      <div class="mb-3 row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Target Weight:</label>
         <div class="col-sm-5">
-            {{!-- need help to make password appear as *** only --}}
-            <input type="text" class="form-control-plaintext" id="staticEmail" value="{{target_weight}} lbs">
+          <input
+            type="text"
+            class="form-control-plaintext"
+            id="staticEmail"
+            value="{{target_weight}} lbs"/>
         </div>
-    </div>
+      </div>
 
-    
-
-    <div class="datecontainer">
+      <div class="datecontainer">
         <div class="row">
-            <label>Program Start Date:</label>
-            <input type="text" class="datePicker" id="datepicker-13" value="{{date}}">
+          <label>Program Start Date:</label>
+          <input
+            type="text"
+            class="datePicker"
+            id="datepicker-13"
+            value="{{format_date start_date}}"/>
         </div>
-    </div>
+      </div>
 
-    
-    <div class="datecontainer">
+      <div class="datecontainer">
         <div class="row">
-            <label>Program End Date:</label>
-            <input type="text" class="datePicker" id="datepicker-14" value="{{date}}">
+          <label>Program End Date:</label>
+          <input
+            type="text"
+            class="datePicker"
+            id="datepicker-14"
+            value="{{format_date target_date}}"/>
         </div>
-    </div>
+      </div>
 
-    <button type="button" class="btn btn-secondary btn-sm">Edit
-    </button>
-</div>
+      <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+    {{!-- </div> --}}
+  </div>
 </div>
