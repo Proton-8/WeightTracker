@@ -4,19 +4,33 @@ const withAuth = require ('../../utils/auth');
 
 router.post('/', async(req, res) => {
     try {
-        const userData = await User.create(req.body);
+        //first we check to see if the user is already in the database.
+        let userData = await User.findOne({
+            where: {
+                // full_name: req.body.name,
+                email: req.body.email,
+            }
+        })
+        
+        //if the user is not existed in the database, we create a new user.
+        if (!userData) {
+            userData = await User.create(req.body);
+        }
+
+        const user = userData.get({ plain: true });
 
         req.session.save(() => {
-            //req.session.user_id = userData.id;
-            req.session.user_id = userData.id;
+            req.session.user_id = user.id;
+            req.session.user_name = user.name;
+            req.session.user_email = user.email;
             req.session.logged_in = true;
-
-            res.status(200).json(userData);
+            res.status(200).json(user);
         });
     } catch (err) {
         res.status(400).json(err);
     }
 });
+
 
 router.post('/login', async(req, res) => {
     try {
