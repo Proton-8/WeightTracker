@@ -1,27 +1,52 @@
 # WeightTracker
-Project 2
+Class Project 2
 
 
 ## Description
 
-We built this app to help the average user keep track of their weight. 
-
-We built this project to create a place for the user to review....
+We built this app to help the average user keep track of their weight. This website will provide the ability to input their daily weight and allow them to display their daily progress on a table or graph and inspire me to keep going.  They will also have the option to share my progress with my friends or my doctor.
+  
 
 ## Usage
 
-City-Scan was developed with an easy user interface. The home page presents the user with a description, recommendation, and several testimonials.   
+The Home Page will present the user with information about the site and the ability to login. The login page will allow returning users to log in with their email and password or create a new user account. 
+  
 
 
-input field: "Enter a City," and a dropdown-menu: "Choose a State." Upon hitting the "Search" button, they are redirected to a results page with the populated information with the state's COVID data on one side and the city's quality of life data on the other. A search bar is at the top of the results page to search again along with a link to find the closest vaccine.
+## Deployed Website
+[Weight Tracker](https://my-tracker35.herokuapp.com/ )
 
-[Weight Tracker](https:///)
+
+## Technologies Used
+
+* HTML
+* Heroku
+* Gimp (video editing)
+* Bootstrap
+* CSS
+* jQuery
+* Chart.js
+* Mysql
+<br>
+<h2>  Example screen shots: </h2>
+
+<img src="public\image\WT-demo1.gif" alt="Test DEMO GIF">
+
+</p>
+
+<p>
+
+
+
+
+
+
 
 
 ## Credits
 
-Contributors to Weight Tracker:
+Outstanding contributors to Weight Tracker:
 
-- My Ly | [Github Profile](https://github.com/ )
-- Elham Bazazzadeh | [Github Profile](https://github.com/ )
+- My Ly | [Github Profile](https://github.com/myly-2306)
+- Elham Bazazzadeh | [Github Profile]( https://github.com/ebazazzadeh)
 - Ron Shutter | [Github Profile](https://github.com/Proton-8)
