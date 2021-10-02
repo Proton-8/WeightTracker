@@ -53,7 +53,7 @@ router.get("/trackers", withAuth, async (req, res) => {
       where: {
         user_id: req.session.user_id,
       },
-      // order: [["event_date", "ASC"]],
+      order: [["track_date", "ASC"]],
     });
 
     const progresses = progressData.map((progress) => progress.get({ plain: true }));
@@ -63,8 +63,6 @@ router.get("/trackers", withAuth, async (req, res) => {
       progresses,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
-      track_date: req.session.track_date,
-      daily_weight: req.session.daily_weight,
     });
   } catch (err) {
     res.status(500).json(err);
