@@ -1,4 +1,4 @@
-<div class="card login-card1" style="width: 25rem;">
+<div class="card login-card1" style="min-width: 100%;">
   <div class="tracker">
     <h2>My Progress</h2>
   
@@ -9,10 +9,9 @@
       {{! need help to make password appear as *** only }}
       <input
         type="text"
-        readonly
         class="form-control-plaintext"
-        id="staticEmail"
-        value="{{daily_weight}} lbs"
+        id="tracker-weight"
+        value=""
       />
     </div>
   </div>
@@ -23,27 +22,32 @@
       <input
         type="text"
         class="datepicker-13"
-        value="{{date}}"
+        id="tracker-date"
+        value=""
       />
     </div>
+    <button id="daily-tracker" type="button" class="btn btn-secondary btn-sm">Save</button>
   </div>
+  <div class="report">
   <div class="report-table">
     <table class="table">
       <thead class="thead-dark">
       <tr>
         <th scope="col">Date</th>
         <th scope="col">Weight</th>
-        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
       </thead>
       {{#each progresses as |progress|}}
       <tr tracker_id="{{progress.id}}">
         <td>{{format_date progress.track_date}}</td>
         <td>{{progress.daily_weight}}</td>
-        <td>Edit</td>
+        <td><img src="/image/delete.png" alt="delete icon" class="delete-icon"></td>
       </tr>
       {{/each}}
     </table>
+  </div>
+  <div class="report-graph"><img src="/image/graph.jpg" alt="weight loss graph"></div>
   </div>
 </div>
 </div>
