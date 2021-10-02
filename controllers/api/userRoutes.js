@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Track } = require('../../models');
+const { User, Track, Tracker } = require('../../models');
 const withAuth = require ('../../utils/auth');
 
 router.post('/', async(req, res) => {
@@ -18,6 +18,12 @@ router.post('/', async(req, res) => {
         }
 
         const user = userData.get({ plain: true });
+
+        await Tracker.create({
+            track_date: req.body.start_date,
+            daily_weight: req.body.current_weight,
+            user_id: user.id,
+        });
 
         req.session.save(() => {
             req.session.user_id = user.id;
