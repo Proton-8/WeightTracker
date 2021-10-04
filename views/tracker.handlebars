@@ -1,27 +1,18 @@
 <div class="card login-card1" style="min-width: 100%;">
   <div class="tracker">
     <h2>My Progress</h2>
-  
 <div>
     <label for="staticEmail">Daily Weight:</label>
-      <input
-        type="text"
-        id="tracker-weight"
-        value=""/>
+    <input type="text" id="tracker-weight" value=""/>
 </div>
-  <div class="datecontainer">
-    <div>
+<div class="datecontainer">
+  <div>
       <label>Weight Date:</label>
-      <input
-        type="text"
-        class="datepicker-13"
-        id="tracker-date"
-        value=""
-      />
-    </div>
-    <button id="daily-tracker" type="button" class="btn btn-secondary btn-sm">Save</button>
+      <input type="text" class="datepicker-13" id="tracker-date" value=""/>
   </div>
-  <div class="report">
+  <button id="daily-tracker" type="button" class="btn btn-secondary btn-sm">Save</button>
+</div>
+<div class="report">
   <div class="report-table">
     <table class="table">
       <thead class="thead-dark">
@@ -39,10 +30,11 @@
       </tr>
       {{/each}}
     </table>
-  </div>
-  <div class="report-graph"><img src="/image/graph.jpg" alt="weight loss graph"></div>
-  </div>
+  </div><div id="chartContainer"  class="report-graph"></div>
+</div>
 </div>
 </div>
 
+<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
 <script src="/js/tracker.js"></script>
+<script src="/js/chart.js"></script>
