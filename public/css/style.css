@@ -2,10 +2,11 @@
 :root {
   --primary: #ffa500;
   --secondary: #b38b00;
-  --third: #fffb00e1;
+  --third: #fffb00b6;
   --fourth: #ff9400;
   --fifth: #b36800;
-  --hover: black;
+  --hover:white;
+
 }
 
 * {
@@ -20,40 +21,41 @@ body {
 
     background-image:url("/image/Fork-tape-blur1.png");
     /* url("https://www.pngplay.com/wp-content/uploads/2/Sewing-Measure-Tape-PNG-Clipart-Background.png"); */
-    color: navy;
+    /* color: navy; */
     line-height: 1.7;
     overflow-x: hidden;
     min-height: 100%;
     width:100%;
     height:auto;
+
   
 }
-
 header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
   text-align: center;
   font-family: Impact, Georgia, 'Times New Roman', Times, serif;
   font-size: 10px;
   background:var(--fourth);
-  color: var(--tittle);
+  color:black;
   padding-bottom: 5px;
 }
 .cursive {
   font-family: cursive;
-  
-}
-
+  }
 nav {
   display: flex;
   justify-content: flex-start;
-  line-height: 3;
+  line-height: 2;
   background-color:var(--third);
-  padding-top: 5px;
-  margin-top: 5px;
+  /* padding-top: 5px; */
+  margin-top: 25px;
 }
 
 nav a {
   margin-left: 20px;
-  color: var(--secondary);
+  color:black;
 }
 a:link {
   text-decoration: none;
@@ -106,14 +108,9 @@ footer {
   padding:2px;
   margin-top: 1px;
   max-width: 100%;
-  background:sandybrown;
+  background:var(--primary);
   color:black;
 }
-
-
-
-
-
 
  .fontSize {
       font-family: 'Times New Roman', Times, serif;
@@ -122,36 +119,44 @@ footer {
     }
     .boxShadow1{
       font-family: Georgia, 'Times New Roman', Times, serif;
-      font-size: 25px;
+      font-size: 20px;
       width:max-content;
       height: 100%;
       background-color:var(--primary);
       text-align:center;
-      margin:15px;
-      padding: 5px;
+      margin:5px;
+      padding: 10px;
     }
   
     .boxShadow2{
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 24px;
-      width:min-content;
+      justify-content: space-evenly;
+      /* width:min-content; */
       height:min-content;
       background-color:black;
-      text-align: justify;
+      text-align: center;
       margin:3px;
       padding: 5px;
     }
     .btn-group{
-      font-family: Arial, Helvetica, sans-serif, Georgia, 'Times New Roman', Times, serif;
-      font-size: 20px;
+      font-family: Georgia, Arial, Helvetica, sans-serif,  'Times New Roman', Times, serif;
+      font-size: 30px;
       /* padding: 5px; */
 
     }
 
 .card {
-  margin-left: 20px;
+  margin: 5px;
+  /* background-color:black; */
 }
-
+.card-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:rgba(245, 245, 245, 0.664);
+  font-size: 20px;
+  text-align: center;
+      /* font-weight: bold; */
+}
 .delete-icon {
   width: 20px;
   height: 20px;
