@@ -177,7 +177,8 @@ footer {
 
 .report-graph {
   flex: right;
-  width: 50%;
+  width: 40%;
+  height: 350px;
   margin-left: 10px;
   margin-top: 25px;
 }
